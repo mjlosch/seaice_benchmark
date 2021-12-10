@@ -18,14 +18,14 @@
 #
 #uwindstartdate1   = 00000101,
 #uwindstartdate2   = 000000,
-#uwindperiod       = 10800.0,
+ uwindperiod       = 10800.0,
 #
 #vwindstartdate1   = 00000101,
 #vwindstartdate2   = 000000,
-#vwindperiod       = 10800.0,
+ vwindperiod       = 10800.0,
 #
- uwindfile         = 'const_5.00_2000.bin',
- vwindfile         = 'const_5.00_2000.bin',
+ uwindfile         = 'Uwindfield_shifted_2000.bin',
+ vwindfile         = 'Vwindfield_shifted_2000.bin',
  &
 
 # *********************
