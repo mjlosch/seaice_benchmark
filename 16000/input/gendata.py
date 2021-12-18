@@ -112,12 +112,17 @@ writefield('vVel_'+dxstr+'.bin',vo)
 # initial thickness:
 hice = 0.3 + 0.005*np.sin(500*xx) + 0.005*np.sin(500*yy)
 writefield('thickness_'+dxstr+'.bin',hice)
+# symmetrize
+hices = 0.5*(hice + hice.transpose())
+writefield('thickness_sym_'+dxstr+'.bin',hices)
 # initial thickness with random noise
 hice = 0.3 + np.random.normal(scale=0.003,size=xx.shape)
 writefield('noisy_thickness_'+dxstr+'.bin',hice)
 # initial thickness for comparison with:
 hice = 0.3 + 0.005*(np.sin(60./1000.e3*xx) + np.sin(30./1000.e3*yy))
 writefield('thickness_aniso_'+dxstr+'.bin',hice)
+hices = 0.5*(hice + hice.transpose())
+writefield('thickness_aniso_sym_'+dxstr+'.bin',hices)
 
 # constant
 writefield('const_00_'+dxstr+'.bin',np.zeros(hice.shape))
